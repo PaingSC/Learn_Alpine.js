@@ -1,8 +1,36 @@
 <html>
   <head>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
     <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+
+    <!-- ------------------------------------------------------ -->
+    <h2>Building a counter</h2>
+    <div x-data="{ count: 0 }">
+      <button x-on:click="count++">Increment</button>
+      <span x-text="count"></span>
+    </div>
+
+    <!-- Building a counter practice -->
+    <h2>Rewrite: Building a counter</h2>
+    <div x-data="{count: 0}">
+      <button @click="count++">Increace Count</button>
+      <span x-text="count"></span>
+    </div>
+
+    <!-- ------------------------------------------------------ -->
+    <!-- ------------------------------------------------------ -->
+    <h2>Building a dropdown</h2>
+    <div x-data="{open: false}">
+      <p x-text="open"></p>
+      <button @click="open = !open">Toggle</button>
+      <div x-show="open">Dropdown Content</div>
+    </div>
+    <!-- ------------------------------------------------------ -->
+    <!-- ------------------------------------------------------ -->
+    <h2>Building a search input</h2>
+    <div x-data=""></div>
   </body>
 </html>
